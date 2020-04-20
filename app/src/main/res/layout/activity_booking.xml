@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BookingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageButton
+            android:id="@+id/btn_backbooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"
+            android:background="@color/transparent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form Peminjaman Gedung"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan namamu"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nim"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nimmu"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fakultas"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan fakultasmu"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organisasi"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan oraganisasimu"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gedung yang dipinjam"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gor Pertamina"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorbg"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gedung Kebudayaan Mahasiswa"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorbg"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samantha Krida"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorbg"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal pinjam"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTv"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/pickDate"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:text="Pilih tanggal"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:background="@drawable/shadow"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colortxt2"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu Pinjam"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan waktu"
+                android:textSize="15sp"
+                android:inputType="number"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Acara"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internal"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorbg"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eksternal"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorbg"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Acara"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan deskripsi acara"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surat Permohonan"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorbg"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="3dp"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pilih"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colortxt2"
+                    android:layout_alignParentLeft="true"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/upload"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KTM"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorbg"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorbg"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="3dp"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pilih"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colortxt2"
+                    android:layout_alignParentLeft="true"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/upload"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kirim"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:background="@drawable/shape"
+            android:layout_gravity="right"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/colortxt2"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>

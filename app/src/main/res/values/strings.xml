@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Si-Dung</string>
+    <string name="universitas_brawijaya">Universitas Brawijaya</string>
+    <string name="keterangan">Pinjam gedung dengan mudah \nMenggunakan aplikasi\n SI-DUNG</string>
+    <string name="login">Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="information">1. Buka Aplikasi SI-DUNG \n2. Login / Register jika belum memiliki akun \n3. Buka fitur Booking \n4. Pastikan anda telah membaca syarat dan ketentuan peminjaman gedung \n5. Mengisi formulir peminjaman gedung \n6. Tunggulah konfirmasi admin maksimal 2x24 jam \n7. Jika peminjaman gedung disetujui, lakukan konfirmasi ke penjaga gedung terkait dan membayar biaya kebersihan sebesar Rp.300.000 \n8. Setelah penggunaan gedung selesai, lakukan konfirmasi ke penjaga gedung dan pada aplikasi anda \n9. Selesai.</string>
+    <string name="welcome">Welcome Back,</string>
+    <string name="rule">1. Sebelum mengisi formulir, pastikan anda telah memiliki surat permohonan peminjaman sesuai format yang telah ditentukan. \n2. Download format surat permohonan dibawah. \n3. Isilah formulir peminjaman dan upload surat permohonan yang telah dibuat \n4. Kelengkapan data yang dikirim akan menentukan disetujui atau tidaknya peminjaman gedung \n5. Pastikan data yang akan dikirim sudah baik dan benar \n6. Penyalahgunaan peminjaman gedung akan mendapatkan sanksi yang telah ditentukan.</string>
+    <string name="pilih">Pilih file</string>
+</resources>

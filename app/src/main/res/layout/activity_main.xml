@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/colorbg">
+
+    <ImageView
+        android:id="@+id/btn_info"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/information"
+        android:layout_gravity="right"
+        android:layout_margin="11dp"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="285dp"
+        android:layout_height="448dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-35dp"
+        android:src="@drawable/foto1"
+        app:riv_corner_radius="22dp"
+        app:riv_mutate_background="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/universitas_brawijaya"
+        android:textSize="20sp"
+        android:textColor="@color/colortxt2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keterangan"
+        android:textSize="17sp"
+        android:textColor="@color/colortxt2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorbtn"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colortxt2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="120dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_createaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorbtn"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colortxt2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginLeft="75dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
