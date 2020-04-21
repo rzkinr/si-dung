@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.androidnetworking.AndroidNetworking
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
@@ -47,6 +48,11 @@ class HomeFragment : Fragment() {
                 }
             }
         })
+    }
+
+    fun getGedungOne(id:String){
+        AndroidNetworking.post("http://localhost/sidung/users/read-gedung-single-json.php")
+            .addBodyParameter("id", id)
     }
 
 

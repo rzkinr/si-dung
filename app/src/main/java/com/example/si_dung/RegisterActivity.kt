@@ -16,6 +16,18 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        btn_signup.setOnClickListener(){
+            var data_nama: String = txt_nuser.text.toString()
+            var data_email: String = txt_nemail.text.toString()
+            var data_password: String = txt_npassword.text.toString()
+
+            postkeserver(data_nama,data_email,data_password)
+
+            val intent = Intent(applicationContext,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         btn_backregister.setOnClickListener(){
             startActivity(Intent(applicationContext, MainActivity::class.java))
             finish()
@@ -23,7 +35,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     fun postkeserver(data1:String, data2:String, data3:String){
-        AndroidNetworking.post("http://192.168.43.214/sidung/users/proses-create-users.php")
+        AndroidNetworking.post("http://192.168.43.18/sidung/users/proses-create-users.php")
             .addBodyParameter("nama_lengkap", data1)
             .addBodyParameter("email", data2)
             .addBodyParameter("password", data3)

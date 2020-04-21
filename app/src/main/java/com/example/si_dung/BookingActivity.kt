@@ -29,8 +29,7 @@ class BookingActivity : AppCompatActivity() {
         }
 
         btn_backbooking.setOnClickListener(){
-            val intent = Intent(applicationContext, BookingFragment::class.java)
-            startActivity(intent)
+
         }
     }
 }

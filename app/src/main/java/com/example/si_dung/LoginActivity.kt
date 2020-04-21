@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun postkerserver(data1:String,data2:String){
-        AndroidNetworking.post("http://192.168.43.214/sidung/users/ceklogin-users.php")
+        AndroidNetworking.post("http://192.168.43.18/sidung/users/ceklogin-users.php")
             .addBodyParameter("email", data1)
             .addBodyParameter("password", data2)
             .setPriority(Priority.MEDIUM)
