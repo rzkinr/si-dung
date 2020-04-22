@@ -49,6 +49,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/nama_gedung"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gor Pertamina"
@@ -56,6 +57,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/luas_gedung"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Luas Gedung : 100 x 100"
@@ -63,6 +65,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/kapasitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kapasitas Gedung : 1000 orang"
@@ -70,6 +73,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/parkir"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Parkiran Gedung Ada"

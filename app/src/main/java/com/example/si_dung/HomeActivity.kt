@@ -21,6 +21,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        menu_bottom.setItemSelected(R.id.home, true)
+
         homeFragment = HomeFragment()
         supportFragmentManager
             .beginTransaction()
