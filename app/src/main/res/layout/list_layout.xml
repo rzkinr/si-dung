@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="12dp"
+    app:cardBackgroundColor="@color/colorbg"
+    app:cardCornerRadius="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/riwayatNamaGedung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gor Pertamina"
+            android:textColor="@color/colortxt2"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/stts"
+            android:layout_below="@+id/riwayatNamaGedung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status : "
+            android:textColor="@color/colortxt2"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/stts"
+            android:layout_below="@+id/riwayatNamaGedung"
+            android:id="@+id/riwayatStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ada"
+            android:textColor="@color/colortxt2"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

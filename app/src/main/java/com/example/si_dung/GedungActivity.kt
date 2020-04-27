@@ -20,7 +20,8 @@ class GedungActivity : AppCompatActivity() {
         val nkapasitas = data_object.getStringExtra("kapasitas")
         val nparkir = data_object.getStringExtra("parkir")
 
-        nama_gedung.text = "$ngedung"
+        tvNamaGedung = findViewById(R.id.nama_gedung)
+        tvNamaGedung.setText(ngedung)
         luas_gedung.text = "Luas Gedung : $nluas"
         kapasitas.text = "Kapasitas : $nkapasitas"
         parkir.text = "Parkir : $nparkir"

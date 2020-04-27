@@ -13,13 +13,6 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-        <ImageButton
-            android:id="@+id/btn_backbooking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/arrow"
-            android:background="@color/transparent"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,6 +41,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan namamu"
@@ -73,6 +67,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_nim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan nimmu"
@@ -98,6 +93,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_fakultas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan fakultasmu"
@@ -123,6 +119,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_orga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan oraganisasimu"
@@ -140,11 +137,13 @@
             android:layout_marginTop="5dp"/>
 
         <RadioGroup
+            android:id="@+id/radioGedung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
             <RadioButton
+                android:id="@+id/radio_gedung1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gor Pertamina"
@@ -153,6 +152,7 @@
                 android:textColor="@color/colorbg"/>
 
             <RadioButton
+                android:id="@+id/radio_gedung2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gedung Kebudayaan Mahasiswa"
@@ -161,6 +161,7 @@
                 android:textColor="@color/colorbg"/>
 
             <RadioButton
+                android:id="@+id/radio_gedung3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Samantha Krida"
@@ -231,6 +232,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_waktu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan waktu"
@@ -249,11 +251,13 @@
             android:layout_marginTop="5dp"/>
 
         <RadioGroup
+            android:id="@+id/radioJenis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
             <RadioButton
+                android:id="@+id/radio_jenis1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Internal"
@@ -262,6 +266,7 @@
                 android:textColor="@color/colorbg"/>
 
             <RadioButton
+                android:id="@+id/radio_jenis2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Eksternal"
@@ -289,6 +294,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
+                android:id="@+id/book_deskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukkan deskripsi acara"
