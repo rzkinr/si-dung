@@ -46,10 +46,10 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:src="@drawable/gor"
                     />
 
                 <TextView
+                    android:id="@+id/detail_namagedung"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gor Pertamina"
@@ -57,6 +57,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nama : -"
@@ -64,6 +65,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_nim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nim : -"
@@ -71,6 +73,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_fakultas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fakultas : -"
@@ -78,6 +81,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_orga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Organisasi : -"
@@ -85,13 +89,23 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_tanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tanggal dan waktu pinjam : -"
+                    android:text="Tanggal : -"
                     android:textColor="@color/colortxt2"
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_waktu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu pinjam : -"
+                    android:textColor="@color/colortxt2"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detail_jenis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jenis acara : -"
@@ -99,6 +113,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_desacara"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Deskripsi acara : -"
@@ -106,6 +121,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_surat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Surat Permohonan : -"
@@ -113,9 +129,26 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/detail_ktm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="KTM : -"
+                    android:textColor="@color/colortxt2"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detail_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status : -"
+                    android:textColor="@color/colortxt2"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detail_desk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi : -"
                     android:textColor="@color/colortxt2"
                     android:textStyle="bold"/>
 

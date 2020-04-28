@@ -38,10 +38,12 @@ class RiwayatActivity : AppCompatActivity() {
                         val jsonObject = jsonArray.getJSONObject(i)
                         Log.e("_kotlinTittle", jsonObject.optString("nama_gedung"))
 
+                        val no_pinjam = jsonObject.optString("no_pinjam").toString()
+
                         val data1 = jsonObject.optString("nama_gedung").toString()
                         val data2 = jsonObject.optString("status").toString()
 
-                        riwayat.add(ClassModelRiwayat("$data1", "$data2"))
+                        riwayat.add(ClassModelRiwayat("$no_pinjam","$data1", "$data2"))
                     }
 
                     val adapter = RiwayatAdapter(riwayat)

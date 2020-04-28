@@ -1,5 +1,7 @@
 package com.example.si_dung
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +11,18 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RiwayatAdapter (val riwayatList: ArrayList<ClassModelRiwayat>):RecyclerView.Adapter<RiwayatAdapter.ViewHolder>() {
 
+    lateinit var mContext: Context
+
     override fun onBindViewHolder(holder: RiwayatAdapter.ViewHolder, position: Int) {
         val riwayat: ClassModelRiwayat = riwayatList[position]
         holder?.tvNamaGedung?.text = riwayat.nama_gedung
         holder?.tvStatus?.text = riwayat.status
 
         holder?.itemView?.setOnClickListener(){
+            val intent = Intent(mContext.applicationContext, DetailActivity::class.java)
+            intent.putExtra("no_pinjam", riwayat.no_pinjam)
+            mContext.startActivity(intent)
+
             Toast.makeText(holder?.itemView.context, "Pilih " + riwayat.nama_gedung, Toast.LENGTH_SHORT).show()
         }
 
