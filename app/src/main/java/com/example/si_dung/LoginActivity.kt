@@ -16,6 +16,9 @@ import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
 
+    var email: String = ""
+    var password: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -28,11 +31,9 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }else {
             btn_signin.setOnClickListener(){
-                var email: String =login_email.text.toString()
-                var password: String =login_pass.text.toString()
+                email =login_email.text.toString()
+                password =login_pass.text.toString()
                 postkerserver(email,password)
-
-                Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -42,8 +43,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btn_backlogin.setOnClickListener(){
-            startActivity(Intent(applicationContext, MainActivity::class.java))
-            finish()
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -70,8 +71,19 @@ class LoginActivity : AppCompatActivity() {
                             editor.putString("STATUS",statuslogin)
                             editor.apply()
 
-                            startActivity(Intent(this@LoginActivity,HomeActivity::class.java))
+                            val profil = getSharedPreferences("profil", Context.MODE_PRIVATE)
+                            val edit=profil.edit()
+                            edit.putString("email", email)
+                            edit.apply()
+
+                            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                             finish()
+
+                            Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
+                        }else {
+                            login_email.setText("")
+                            login_pass.setText("")
+                            Toast.makeText(this@LoginActivity, "Login gagal", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

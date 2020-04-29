@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.si_dung.LoginActivity
 import com.example.si_dung.MainActivity
 
 import com.example.si_dung.R
@@ -35,14 +36,23 @@ class ProfilFragment : Fragment() {
         }
 
         btn_logout.setOnClickListener(){
-//            val sharedPreferences = this.activity.getSharedPreferences("CEKLOGIN", Context.MODE_PRIVATE)
-//            val editor = sharedPreferences.edit()
-//
-//            editor.putString("STATUS","0")
-//            editor.apply()
-//
-//            startActivity(Intent(view.context, MainActivity::class.java))
+            val sharedPreferences = activity?.getSharedPreferences("CEKLOGIN", Context.MODE_PRIVATE)
+            val editor = sharedPreferences?.edit()
+
+            editor?.putString("STATUS","0")
+            editor?.apply()
+
+            startActivity(Intent(view.context, LoginActivity::class.java))
         }
+
+        val nomor = activity?.getSharedPreferences("NOMOR", Context.MODE_PRIVATE)
+        val nnama = nomor?.getString("nama","").toString()
+        val nemail = nomor?.getString("email","").toString()
+
+        profil_username.text = nnama
+        profil_email.text = nemail
+
+
     }
 
 }

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.DatePicker
 import android.widget.RadioButton
 import android.widget.Toast
@@ -13,15 +14,15 @@ import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONArrayRequestListener
+import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.example.si_dung.Fragment.BookingFragment
 import com.example.si_dung.Fragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_booking.*
 import org.json.JSONArray
+import org.json.JSONObject
 import java.util.*
 
 class BookingActivity : AppCompatActivity() {
-
-    lateinit var bookingFragment: BookingFragment
 
     lateinit var radioGedungbtn: RadioButton
     lateinit var radioJenisbtn: RadioButton
@@ -42,8 +43,12 @@ class BookingActivity : AppCompatActivity() {
             dpd.show()
         }
 
+        val nomor = getSharedPreferences("NOMOR", Context.MODE_PRIVATE)
+        val ndata = nomor.getString("no_pinjam","").toString()
+        Log.d("NOMOR", ndata)
+
         btn_send.setOnClickListener(){
-            var no_pinjam: String = "202002323" // no_pinjam sementara, nantinya bisa auto generat
+            var no_pinjam: String =  ndata
             var nama: String = book_nama.text.toString()
             var nim: String = book_nim.text.toString()
             var fakultas: String = book_fakultas.text.toString()
@@ -77,6 +82,7 @@ class BookingActivity : AppCompatActivity() {
             dateTv.setText("")
             radioGedung.clearCheck()
             radioJenis.clearCheck()
+            Toast.makeText(this@BookingActivity, "Data Berhasil Dikirim", Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -100,7 +106,7 @@ class BookingActivity : AppCompatActivity() {
             .build()
             .getAsJSONArray(object : JSONArrayRequestListener{
                 override fun onResponse(response: JSONArray?) {
-                    Toast.makeText(this@BookingActivity, "Data Berhasil Dikirim", Toast.LENGTH_SHORT).show()
+
                 }
 
                 override fun onError(anError: ANError?) {

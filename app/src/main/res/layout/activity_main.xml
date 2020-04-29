@@ -17,10 +17,10 @@
         android:layout_margin="11dp"/>
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="285dp"
+        android:layout_width="wrap_content"
         android:layout_height="448dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-35dp"
+        android:layout_marginTop="-10dp"
         android:src="@drawable/foto1"
         app:riv_corner_radius="22dp"
         app:riv_mutate_background="true"/>

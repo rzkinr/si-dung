@@ -29,7 +29,14 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         btn_backregister.setOnClickListener(){
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            val intent = Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btn_regtolog.setOnClickListener(){
+            val intent = Intent(applicationContext,LoginActivity::class.java)
+            startActivity(intent)
             finish()
         }
     }

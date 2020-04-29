@@ -12,7 +12,7 @@ class InformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
         btn_backinfo.setOnClickListener(){
-            val intent = Intent(this@InformationActivity, MainActivity::class.java)
+            val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
     }
