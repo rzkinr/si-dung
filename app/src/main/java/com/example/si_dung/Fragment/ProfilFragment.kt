@@ -1,11 +1,13 @@
 package com.example.si_dung.Fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.si_dung.MainActivity
 
 import com.example.si_dung.R
 import com.example.si_dung.RiwayatActivity
@@ -30,6 +32,16 @@ class ProfilFragment : Fragment() {
         btn_pengajuan.setOnClickListener(){
             val intent = Intent(view.context, RiwayatActivity::class.java)
             startActivity(intent)
+        }
+
+        btn_logout.setOnClickListener(){
+//            val sharedPreferences = this.activity.getSharedPreferences("CEKLOGIN", Context.MODE_PRIVATE)
+//            val editor = sharedPreferences.edit()
+//
+//            editor.putString("STATUS","0")
+//            editor.apply()
+//
+//            startActivity(Intent(view.context, MainActivity::class.java))
         }
     }
 

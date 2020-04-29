@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
@@ -27,9 +28,11 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }else {
             btn_signin.setOnClickListener(){
-                var email=login_email.text.toString()
-                var password=login_pass.text.toString()
+                var email: String =login_email.text.toString()
+                var password: String =login_pass.text.toString()
                 postkerserver(email,password)
+
+                Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
             }
         }
 

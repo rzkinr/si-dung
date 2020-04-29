@@ -19,7 +19,7 @@ class RiwayatAdapter (val riwayatList: ArrayList<ClassModelRiwayat>):RecyclerVie
         holder?.tvStatus?.text = riwayat.status
 
         holder?.itemView?.setOnClickListener(){
-            val intent = Intent(mContext.applicationContext, DetailActivity::class.java)
+            val intent = Intent(mContext, DetailActivity::class.java)
             intent.putExtra("no_pinjam", riwayat.no_pinjam)
             mContext.startActivity(intent)
 
