@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        
+
         btn_regtolog.setOnClickListener(){
             val intent = Intent(applicationContext,LoginActivity::class.java)
             startActivity(intent)
