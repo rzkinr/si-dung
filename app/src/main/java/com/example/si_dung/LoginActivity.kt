@@ -42,10 +42,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_backlogin.setOnClickListener(){
-            val intent = Intent(applicationContext, MainActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     fun postkerserver(data1:String,data2:String){
