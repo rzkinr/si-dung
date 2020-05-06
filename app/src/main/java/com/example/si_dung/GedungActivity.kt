@@ -29,7 +29,7 @@ class GedungActivity : AppCompatActivity() {
     }
 
     fun getGedungOne(data: String){
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/read-gedung-single-json.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/read-gedung-single-json.php")
             .addBodyParameter("id", data)
             .setPriority(Priority.MEDIUM)
             .build()
@@ -80,7 +80,7 @@ class GedungActivity : AppCompatActivity() {
 
         val jadwal = ArrayList<ClassModelJadwal>()
 
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/read-jadwal-json.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/read-jadwal-json.php")
             .addBodyParameter("nama_gedung", data)
             .setPriority(Priority.MEDIUM)
             .build()

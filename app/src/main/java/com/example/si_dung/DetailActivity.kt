@@ -1,15 +1,20 @@
 package com.example.si_dung
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONArrayRequestListener
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_gedung.*
+import org.json.JSONArray
 import org.json.JSONObject
 
 class DetailActivity : AppCompatActivity() {
@@ -21,10 +26,12 @@ class DetailActivity : AppCompatActivity() {
         val data: Intent = intent
         val no: String = data.getStringExtra("id_pinjam")
         getDetailRiwayat(no)
+
+        konfirmasi()
     }
 
     fun getDetailRiwayat(id_pinjam: String){
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/read-peminjaman-single-json.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/read-peminjaman-single-json.php")
             .addBodyParameter("id", id_pinjam)
             .setPriority(Priority.MEDIUM)
             .build()
@@ -69,7 +76,7 @@ class DetailActivity : AppCompatActivity() {
                             riwayat_gambar.setImageResource(R.drawable.gor0)
                         }else if(nid== "Samantha Krida"){
                             riwayat_gambar.setImageResource(R.drawable.sakri0)
-                        }else {
+                        }else if(nid== "Gedung Kebudayaan Mahasiswa") {
                             riwayat_gambar.setImageResource(R.drawable.gkm0)
                         }
 
@@ -80,5 +87,36 @@ class DetailActivity : AppCompatActivity() {
 
                 }
             })
+    }
+
+    fun konfirmasi(){
+        btn_konfirmasi.setOnClickListener(){
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setTitle("Konfirmasi")
+                .setMessage("Apakah anda yakin sudah selesai menggunakan gedung?")
+                .setPositiveButton("OK", DialogInterface.OnClickListener{ dialog, which ->
+                    AndroidNetworking.post("http://192.168.43.18/api/users/proses-update-peminjaman.php")
+                        .addBodyParameter("konfirmasi", "Selesai")
+                        .setPriority(Priority.MEDIUM)
+                        .build()
+                        .getAsJSONArray(object : JSONArrayRequestListener {
+                            override fun onResponse(response: JSONArray?) {
+
+                            }
+
+                            override fun onError(anError: ANError?) {
+
+                            }
+                        })
+                    finish()
+
+                    Toast.makeText(this, "Konfirmasi berhasil", Toast.LENGTH_SHORT).show()
+                })
+                .setNegativeButton("Cancel", DialogInterface.OnClickListener{
+                        dialog, which -> dialog.cancel()
+                })
+                .setCancelable(false)
+                .show()
+        }
     }
 }

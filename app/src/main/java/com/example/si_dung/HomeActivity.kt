@@ -82,7 +82,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun getUsers(data: String){
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/read-users-json.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/read-users-json.php")
             .addBodyParameter("email", data)
             .setPriority(Priority.MEDIUM)
             .build()

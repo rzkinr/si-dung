@@ -1,5 +1,6 @@
 package com.example.si_dung
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -21,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_booking.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
+import java.util.jar.Manifest
 
 class BookingActivity : AppCompatActivity() {
 
@@ -38,10 +40,20 @@ class BookingActivity : AppCompatActivity() {
 
         pickDate.setOnClickListener(){
             val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, nyear, nmonth, ndayOfMonth ->
-                dateTv.setText(""+ nyear +"/"+ nmonth +"/"+ ndayOfMonth)
+                dateTv.setText(""+ ndayOfMonth +"/"+ nmonth +"/"+ nyear)
             }, year, month, day)
             dpd.show()
         }
+
+        pickDate2.setOnClickListener(){
+            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, nyear, nmonth, ndayOfMonth ->
+                dateTv2.setText(""+ ndayOfMonth +"/"+ nmonth +"/"+ nyear)
+            }, year, month, day)
+            dpd.show()
+        }
+
+        var tgl: String = dateTv.text.toString() + dateTv2.text.toString()
+        Log.d("tgl", tgl)
 
         val nomor = getSharedPreferences("NOMOR", Context.MODE_PRIVATE)
         val ndata = nomor.getString("no_pinjam","").toString()
@@ -58,7 +70,7 @@ class BookingActivity : AppCompatActivity() {
             radioGedungbtn = findViewById(selectedGedung)
             var nama_gedung: String = radioGedungbtn.text.toString()
 
-            var tanggal_pinjam = dateTv.text.toString()
+            var tanggal_pinjam = dateTv.text.toString() +" - "+ dateTv2.text.toString()
             var waktu_pinjam = book_waktu.text.toString()
 
             val selectedJenis = radioJenis.checkedRadioButtonId
@@ -88,7 +100,7 @@ class BookingActivity : AppCompatActivity() {
     }
 
     fun booking(data1: String, data2: String, data3: String, data4: String, data5: String, data6: String, data7: String, data8: String, data9: String, data10: String, data11: String, data12: String, data13: String){
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/proses-create-peminjaman.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/proses-create-peminjaman.php")
             .addBodyParameter("no_pinjam", data1)
             .addBodyParameter("nama", data2)
             .addBodyParameter("nim", data3)

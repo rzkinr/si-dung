@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     fun postkeserver(data1:String, data2:String, data3:String){
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/proses-create-users.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/proses-create-users.php")
             .addBodyParameter("nama_lengkap", data1)
             .addBodyParameter("email", data2)
             .addBodyParameter("password", data3)

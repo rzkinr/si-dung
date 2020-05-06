@@ -33,7 +33,7 @@ class RiwayatActivity : AppCompatActivity() {
 
         val riwayat = ArrayList<ClassModelRiwayat>()
 
-        AndroidNetworking.post("http://192.168.43.18/sidung/users/read-peminjaman-json.php")
+        AndroidNetworking.post("http://192.168.43.18/api/users/read-peminjaman-json.php")
             .addBodyParameter("no_pinjam", data)
             .setPriority(Priority.MEDIUM)
             .build()
