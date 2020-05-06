@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SplashScreen"
+    android:gravity="center"
     android:background="@color/colorbg">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SI DUNG"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/colortxt2"
-        android:gravity="center"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
