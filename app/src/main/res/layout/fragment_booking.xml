@@ -58,18 +58,6 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Surat \nPermohonan"
-            android:textAllCaps="false"
-            android:background="@drawable/shape"
-            android:layout_marginTop="40dp"
-            android:textColor="@color/colortxt2"
-            android:textStyle="bold"
-            android:padding="5dp"
-            android:layout_alignParentRight="false"/>
-
-        <Button
             android:id="@+id/btn_booking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

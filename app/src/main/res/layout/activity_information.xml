@@ -38,19 +38,6 @@
                 android:layout_marginTop="30dp"
                 />
 
-            <Button
-                android:id="@+id/btn_backinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Back"
-                android:textAllCaps="false"
-                android:textSize="15sp"
-                android:background="@drawable/shape"
-                android:layout_gravity="right"
-                android:layout_marginTop="60dp"
-                android:textColor="@color/colortxt2"
-                android:textStyle="bold"/>
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
